@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.employeecrm.employeecrm.entity.Employee;
+import com.employeecrm.employeecrm.model.EmployeeDetails;
 import com.employeecrm.employeecrm.service.EmployeeService;
-import com.employeecrm.employeecrm.service.EmployeeService.EmployeeDetails;
 
 @RestController
 @RequestMapping("/api/employees")

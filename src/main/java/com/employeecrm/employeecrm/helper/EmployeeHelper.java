@@ -24,7 +24,6 @@ public class EmployeeHelper {
 	
 	public List<Employee> findEmployeesWithFilters(String reviewDate, Integer performanceScore,
 			List<String> departments, List<String> projects) {
-		// TODO Auto-generated method stub
 
 		CriteriaBuilder cb = entityManager.getCriteriaBuilder();
 		CriteriaQuery<Employee> cq = cb.createQuery(Employee.class);
@@ -47,7 +46,7 @@ public class EmployeeHelper {
 			}
 		}
 
-		// Department contains (multiple)
+		// Department
 		if (departments != null && !departments.isEmpty()) {
 			List<Predicate> deptPreds = new ArrayList<>();
 			for (String deptName : departments) {
@@ -56,7 +55,7 @@ public class EmployeeHelper {
 			predicates.add(cb.or(deptPreds.toArray(new Predicate[0])));
 		}
 
-		// Projects contains (multiple)
+		// Projects
 		if (projects != null && !projects.isEmpty()) {
 			List<Predicate> projPreds = new ArrayList<>();
 			for (String projName : projects) {

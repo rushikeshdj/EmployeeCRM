@@ -54,8 +54,6 @@ public class Employee {
 	@OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
 	private List<PerformanceReview> performanceReviews;
 
-	// ===== Getters and setters =====
-
 	public Long getId() {
 		return id;
 	}
